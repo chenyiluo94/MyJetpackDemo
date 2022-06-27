@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_item"
+    app:startDestination="@id/fristFragment">
+
+    <fragment
+        android:id="@+id/fristFragment"
+        android:name="com.example.myapplication.navigation.FristFragment"
+        android:label="fragment_frist"
+        tools:layout="@layout/fragment_frist" >
+
+        <argument
+            android:name="name"
+            android:defaultValue="ceshi" />
+    </fragment>
+    <fragment
+        android:id="@+id/secFragment"
+        android:name="com.example.myapplication.navigation.SecFragment"
+        android:label="fragment_sec"
+        tools:layout="@layout/fragment_sec" >
+        <action
+            android:id="@+id/action_secFragment_to_fristFragment"
+            app:destination="@id/fristFragment" />
+    </fragment>
+</navigation>
